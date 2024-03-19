@@ -1,0 +1,162 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-03-13 08:50:25.776233",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "student",
+  "fee_structure",
+  "column_break_dyey",
+  "date",
+  "payment_due_date",
+  "amended_from",
+  "section_break_zeil",
+  "fees_detail",
+  "section_break_vatk",
+  "column_break_tdzv",
+  "column_break_ndbc",
+  "column_break_pymr",
+  "total",
+  "status",
+  "reference_tab",
+  "fees_ledger"
+ ],
+ "fields": [
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Student",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fee_structure",
+   "fieldtype": "Link",
+   "label": "Fee Structure",
+   "options": "Fee Structure"
+  },
+  {
+   "fieldname": "section_break_vatk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_tdzv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ndbc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_pymr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_zeil",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "fees_detail",
+   "fieldtype": "Table",
+   "label": "Fees Detail",
+   "options": "Fees Detail"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": ".YY.MM.####."
+  },
+  {
+   "fieldname": "column_break_dyey",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Fees",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "reference_tab",
+   "fieldtype": "Tab Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "payment_due_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Payment Due Date",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nUnpaid\nPaid\nOverdue\nCancelled"
+  },
+  {
+   "fieldname": "fees_ledger",
+   "fieldtype": "Link",
+   "label": "Fees Ledger",
+   "options": "Fees Ledger",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-03-14 16:28:28.320987",
+ "modified_by": "Administrator",
+ "module": "School",
+ "name": "Fees",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

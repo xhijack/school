@@ -1,0 +1,118 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: {student} {academic_year}",
+ "creation": "2024-03-12 17:03:12.801802",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_sabf",
+  "amended_from",
+  "student",
+  "column_break_nlio",
+  "academic_year",
+  "section_break_gjfr",
+  "fee_structure_detail",
+  "section_break_qmsp",
+  "column_break_txck",
+  "column_break_viuo",
+  "column_break_brdm",
+  "total"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_sabf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Fee Structure",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Academic Year",
+   "options": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_qmsp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_txck",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_viuo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_brdm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Total",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Student",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_nlio",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_gjfr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "fee_structure_detail",
+   "fieldtype": "Table",
+   "options": "Fee Structure Detail",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-03-14 16:47:15.932601",
+ "modified_by": "Administrator",
+ "module": "School",
+ "name": "Fee Structure",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
