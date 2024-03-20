@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "naming_series:",
  "creation": "2024-03-13 08:50:25.776233",
@@ -135,7 +136,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-03-14 16:28:28.320987",
+ "modified": "2024-03-20 10:14:07.015369",
  "modified_by": "Administrator",
  "module": "School",
  "name": "Fees",

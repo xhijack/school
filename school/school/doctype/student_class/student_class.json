@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "format: {class} {academic_year}",
  "creation": "2024-03-09 16:12:29.940470",
@@ -48,7 +49,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-14 16:12:06.414126",
+ "modified": "2024-03-20 10:14:17.676672",
  "modified_by": "Administrator",
  "module": "School",
  "name": "Student Class",
@@ -70,5 +71,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }

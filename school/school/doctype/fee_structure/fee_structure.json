@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "format: {student} {academic_year}",
  "creation": "2024-03-12 17:03:12.801802",
@@ -92,7 +93,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-14 16:47:15.932601",
+ "modified": "2024-03-20 10:13:48.701872",
  "modified_by": "Administrator",
  "module": "School",
  "name": "Fee Structure",
@@ -114,5 +115,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }
