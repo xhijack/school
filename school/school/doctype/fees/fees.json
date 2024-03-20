@@ -12,7 +12,9 @@
   "fee_structure",
   "column_break_dyey",
   "date",
+  "priod",
   "payment_due_date",
+  "payment_date",
   "amended_from",
   "section_break_zeil",
   "fees_detail",
@@ -123,7 +125,9 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Draft\nUnpaid\nPaid\nOverdue\nCancelled"
+   "no_copy": 1,
+   "options": "Draft\nUnpaid\nPaid\nOverdue\nCancelled",
+   "read_only": 1
   },
   {
    "fieldname": "fees_ledger",
@@ -131,12 +135,35 @@
    "label": "Fees Ledger",
    "options": "Fees Ledger",
    "read_only": 1
+  },
+  {
+   "fieldname": "priod",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Priod",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Payment Date",
+   "options": "Student",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "links": [],
- "modified": "2024-03-20 10:14:07.015369",
+ "links": [
+  {
+   "link_doctype": "Fees Ledger",
+   "link_fieldname": "Party"
+  }
+ ],
+ "modified": "2024-03-20 13:33:23.066513",
  "modified_by": "Administrator",
  "module": "School",
  "name": "Fees",
@@ -158,6 +185,23 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
+ "states": [
+  {
+   "color": "Orange",
+   "title": "Unpaid"
+  },
+  {
+   "color": "Green",
+   "title": "Paid"
+  },
+  {
+   "color": "Red",
+   "title": "Cancelled"
+  },
+  {
+   "color": "Gray",
+   "title": "Draft"
+  }
+ ],
  "track_changes": 1
 }

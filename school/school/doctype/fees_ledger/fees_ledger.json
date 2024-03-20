@@ -7,7 +7,9 @@
  "field_order": [
   "section_break_hjwz",
   "amended_from",
-  "posting_date",
+  "date",
+  "priod",
+  "payment_date",
   "student",
   "fee_category",
   "amount",
@@ -29,14 +31,6 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
-  },
-  {
-   "fieldname": "posting_date",
-   "fieldtype": "Datetime",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Posting Date",
-   "reqd": 1
   },
   {
    "fieldname": "student",
@@ -85,19 +79,42 @@
    "fieldtype": "Dynamic Link",
    "label": "Party",
    "options": "party_type"
+  },
+  {
+   "fieldname": "priod",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Priod",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Payment Date"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-03-20 10:14:30.592719",
+ "modified": "2024-03-20 12:53:56.546913",
  "modified_by": "Administrator",
  "module": "School",
  "name": "Fees Ledger",
  "owner": "Administrator",
  "permissions": [
   {
-   "create": 1,
+   "cancel": 1,
    "delete": 1,
    "email": 1,
    "export": 1,
