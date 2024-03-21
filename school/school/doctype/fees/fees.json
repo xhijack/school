@@ -138,11 +138,11 @@
   },
   {
    "fieldname": "priod",
-   "fieldtype": "Date",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Priod",
-   "options": "Student",
+   "options": "Priod",
    "reqd": 1
   },
   {
@@ -163,7 +163,7 @@
    "link_fieldname": "Party"
   }
  ],
- "modified": "2024-03-20 13:33:23.066513",
+ "modified": "2024-03-21 09:07:04.434849",
  "modified_by": "Administrator",
  "module": "School",
  "name": "Fees",
