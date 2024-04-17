@@ -7,13 +7,22 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "no_induk",
   "first_name",
   "last_name",
-  "gender",
+  "nick_name",
   "column_break_clzl",
   "joining_date",
+  "gender",
   "date_of_birth",
-  "enabled"
+  "enabled",
+  "section_break_qqcm",
+  "father_name",
+  "job",
+  "mother_name",
+  "mother_job",
+  "column_break_qizb",
+  "phone_number"
  ],
  "fields": [
   {
@@ -54,11 +63,61 @@
   {
    "fieldname": "column_break_clzl",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nick_name",
+   "fieldtype": "Data",
+   "label": "Nick Name"
+  },
+  {
+   "fieldname": "section_break_qqcm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "father_name",
+   "fieldtype": "Data",
+   "label": "Father Name"
+  },
+  {
+   "fieldname": "mother_name",
+   "fieldtype": "Data",
+   "label": "Mother name"
+  },
+  {
+   "fieldname": "job",
+   "fieldtype": "Select",
+   "label": "Father Job",
+   "options": "Wiraswasta\nswasta- guru\nSwasta- swasta\nSwasta- swasta\nWiraswasta-wirswst\nPNS-karyawan\nSwasta-IRT\nNon ASN-swasta\nWiraswasta\nASN- wiraswasta\nWiraswasta\nSwasta\nSwasta - IRT\nKaryawan- IRT\nSwasta- IRT\nPNS-PNS\nBUMN-BUMN\nWiraswasta-Wiraswasta\nPOLRI- swasta\nWiraswasta- IRT\nPNS-PNS\nswasta- swasta\nSwasta- IRT\nDokter-dokter\nswasta- BUMN\nDokter- dokter"
+  },
+  {
+   "fieldname": "column_break_qizb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "label": "Phone Number",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "no_induk",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "No Induk",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "mother_job",
+   "fieldtype": "Select",
+   "label": "Mother Job",
+   "options": "Wiraswasta\nswasta- guru\nSwasta- swasta\nSwasta- swasta\nWiraswasta-wirswst\nPNS-karyawan\nSwasta-IRT\nNon ASN-swasta\nWiraswasta\nASN- wiraswasta\nWiraswasta\nSwasta\nSwasta - IRT\nKaryawan- IRT\nSwasta- IRT\nPNS-PNS\nBUMN-BUMN\nWiraswasta-Wiraswasta\nPOLRI- swasta\nWiraswasta- IRT\nPNS-PNS\nswasta- swasta\nSwasta- IRT\nDokter-dokter\nswasta- BUMN\nDokter- dokter"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-20 11:04:11.798904",
+ "modified": "2024-04-17 13:42:34.157735",
  "modified_by": "Administrator",
  "module": "School",
  "name": "Student",
