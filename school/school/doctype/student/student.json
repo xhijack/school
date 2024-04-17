@@ -2,7 +2,7 @@
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "format: {first_name} {last_name}",
+ "autoname": "field:no_induk",
  "creation": "2024-03-09 16:07:07.586851",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -117,11 +117,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-04-17 13:42:34.157735",
+ "modified": "2024-04-17 13:53:48.541245",
  "modified_by": "Administrator",
  "module": "School",
  "name": "Student",
- "naming_rule": "Expression",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -137,8 +137,10 @@
    "write": 1
   }
  ],
- "search_fields": "first_name, last_name, gender",
+ "search_fields": "first_name, last_name,father_name, mother_name",
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "no_induk"
 }
