@@ -8,8 +8,7 @@
  "engine": "InnoDB",
  "field_order": [
   "no_induk",
-  "first_name",
-  "last_name",
+  "full_name",
   "nick_name",
   "column_break_clzl",
   "joining_date",
@@ -25,19 +24,6 @@
   "phone_number"
  ],
  "fields": [
-  {
-   "fieldname": "first_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "First Name",
-   "reqd": 1
-  },
-  {
-   "fieldname": "last_name",
-   "fieldtype": "Data",
-   "label": "Last Name"
-  },
   {
    "fieldname": "joining_date",
    "fieldtype": "Date",
@@ -113,11 +99,19 @@
    "fieldtype": "Select",
    "label": "Mother Job",
    "options": "Wiraswasta\nswasta- guru\nSwasta- swasta\nSwasta- swasta\nWiraswasta-wirswst\nPNS-karyawan\nSwasta-IRT\nNon ASN-swasta\nWiraswasta\nASN- wiraswasta\nWiraswasta\nSwasta\nSwasta - IRT\nKaryawan- IRT\nSwasta- IRT\nPNS-PNS\nBUMN-BUMN\nWiraswasta-Wiraswasta\nPOLRI- swasta\nWiraswasta- IRT\nPNS-PNS\nswasta- swasta\nSwasta- IRT\nDokter-dokter\nswasta- BUMN\nDokter- dokter"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Full Name",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-04-17 13:53:48.541245",
+ "modified": "2024-04-18 09:23:52.156981",
  "modified_by": "Administrator",
  "module": "School",
  "name": "Student",
@@ -137,7 +131,7 @@
    "write": 1
   }
  ],
- "search_fields": "first_name, last_name,father_name, mother_name",
+ "search_fields": "full_name, nick_name,father_name, mother_name",
  "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
