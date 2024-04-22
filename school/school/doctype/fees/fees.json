@@ -171,7 +171,7 @@
    "link_fieldname": "Party"
   }
  ],
- "modified": "2024-04-20 10:42:37.239446",
+ "modified": "2024-04-22 09:34:06.173101",
  "modified_by": "Administrator",
  "module": "School",
  "name": "Fees",
@@ -179,6 +179,7 @@
  "owner": "Administrator",
  "permissions": [
   {
+   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,
@@ -188,6 +189,7 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],
