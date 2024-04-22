@@ -1,13 +1,16 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2024-03-09 16:14:05.033486",
+ "creation": "2024-04-20 10:58:00.747411",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "student",
-  "full_name"
+  "full_name",
+  "student_class",
+  "fee_structure",
+  "total_fees"
  ],
  "fields": [
   {
@@ -26,15 +29,41 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Full Name"
+  },
+  {
+   "fieldname": "total_fees",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Total Fees",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "fee_structure",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fee Structure",
+   "options": "Fee Structure"
+  },
+  {
+   "fieldname": "student_class",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Class",
+   "options": "Class"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-04-20 11:31:30.151826",
+ "modified": "2024-04-21 18:46:41.512407",
  "modified_by": "Administrator",
  "module": "School",
- "name": "Student Class Detail",
+ "name": "Fees Schedule Student",
  "owner": "Administrator",
  "permissions": [],
  "sort_field": "modified",

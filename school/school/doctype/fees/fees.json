@@ -9,6 +9,7 @@
  "field_order": [
   "naming_series",
   "student",
+  "full_name",
   "fee_structure",
   "column_break_dyey",
   "date",
@@ -153,6 +154,13 @@
    "label": "Payment Date",
    "options": "Student",
    "read_only": 1
+  },
+  {
+   "fetch_from": "student.full_name",
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -163,7 +171,7 @@
    "link_fieldname": "Party"
   }
  ],
- "modified": "2024-03-21 09:07:04.434849",
+ "modified": "2024-04-20 10:42:37.239446",
  "modified_by": "Administrator",
  "module": "School",
  "name": "Fees",

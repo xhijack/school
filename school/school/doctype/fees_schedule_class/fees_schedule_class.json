@@ -1,40 +1,41 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2024-03-09 16:14:05.033486",
+ "creation": "2024-04-20 10:48:19.770794",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "student",
-  "full_name"
+  "class_student",
+  "total_students"
  ],
  "fields": [
   {
-   "fieldname": "student",
+   "fieldname": "total_students",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Total Students",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "class_student",
    "fieldtype": "Link",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Student",
-   "options": "Student",
+   "label": "Class",
+   "options": "Class",
    "reqd": 1
-  },
-  {
-   "fetch_from": "student.full_name",
-   "fieldname": "full_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Full Name"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-04-20 11:31:30.151826",
+ "modified": "2024-04-21 18:28:48.878393",
  "modified_by": "Administrator",
  "module": "School",
- "name": "Student Class Detail",
+ "name": "Fees Schedule Class",
  "owner": "Administrator",
  "permissions": [],
  "sort_field": "modified",

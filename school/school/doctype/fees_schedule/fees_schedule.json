@@ -1,0 +1,151 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-04-20 10:43:40.442721",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_qiu9",
+  "amended_from",
+  "posting_date",
+  "due_date",
+  "column_break_qkfx",
+  "naming_series",
+  "academic_year",
+  "priod",
+  "section_break_stiu",
+  "student_class",
+  "section_break_gqcb",
+  "students",
+  "section_break_pmff",
+  "column_break_earv",
+  "column_break_doin",
+  "column_break_aawh",
+  "total"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_qiu9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Fees Schedule",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "posting_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Posting Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Due Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "FS/.YY.MM./.####."
+  },
+  {
+   "fieldname": "column_break_qkfx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "label": "Academic Year",
+   "options": "Academic Year"
+  },
+  {
+   "fieldname": "section_break_stiu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_gqcb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "students",
+   "fieldtype": "Table",
+   "label": "Students",
+   "options": "Fees Schedule Student"
+  },
+  {
+   "fieldname": "student_class",
+   "fieldtype": "Table",
+   "label": "Class",
+   "options": "Fees Schedule Class"
+  },
+  {
+   "fieldname": "section_break_pmff",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_earv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_doin",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_aawh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Total"
+  },
+  {
+   "fieldname": "priod",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Priod",
+   "options": "Priod",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-04-21 18:16:37.778452",
+ "modified_by": "Administrator",
+ "module": "School",
+ "name": "Fees Schedule",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
