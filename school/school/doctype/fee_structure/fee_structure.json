@@ -10,6 +10,7 @@
   "section_break_sabf",
   "amended_from",
   "student",
+  "student_name",
   "column_break_nlio",
   "academic_year",
   "section_break_gjfr",
@@ -89,11 +90,17 @@
    "fieldtype": "Table",
    "options": "Fee Structure Detail",
    "reqd": 1
+  },
+  {
+   "fetch_from": "student.full_name",
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "label": "Student Name"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-20 10:13:48.701872",
+ "modified": "2024-05-28 10:45:27.403890",
  "modified_by": "Administrator",
  "module": "School",
  "name": "Fee Structure",
