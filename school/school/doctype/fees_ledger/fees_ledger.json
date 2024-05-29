@@ -11,6 +11,7 @@
   "priod",
   "payment_date",
   "student",
+  "full_name",
   "fee_category",
   "amount",
   "status",
@@ -103,12 +104,20 @@
    "in_standard_filter": 1,
    "label": "Date",
    "reqd": 1
+  },
+  {
+   "fetch_from": "student.full_name",
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Full Name"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-03-21 09:07:33.615099",
+ "modified": "2024-05-29 09:34:59.794889",
  "modified_by": "Administrator",
  "module": "School",
  "name": "Fees Ledger",
