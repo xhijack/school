@@ -1,0 +1,150 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-30 06:47:41.498247",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_vqu6",
+  "amended_from",
+  "student",
+  "full_name",
+  "column_break_btra",
+  "posting_date",
+  "academic_year",
+  "fee_structure",
+  "section_break_jjmg",
+  "priod_list",
+  "section_break_oumg",
+  "column_break_cgcq",
+  "status",
+  "column_break_xtfw",
+  "total"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_vqu6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Accumulated Fees",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Student",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_btra",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Posting Date",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "student.full_name",
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name"
+  },
+  {
+   "depends_on": "eval:doc.student",
+   "fieldname": "fee_structure",
+   "fieldtype": "Link",
+   "label": "Fee Structure",
+   "options": "Fee Structure",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_jjmg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "priod_list",
+   "fieldtype": "Table",
+   "label": "Priod List",
+   "options": "Accumulated Fees Detail"
+  },
+  {
+   "fieldname": "section_break_oumg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_cgcq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_xtfw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "label": "Academic Year",
+   "options": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nUnpaid\nPaid\nCancelled"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Fees",
+   "link_fieldname": "party"
+  }
+ ],
+ "modified": "2024-05-30 10:13:19.624333",
+ "modified_by": "Administrator",
+ "module": "School",
+ "name": "Accumulated Fees",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

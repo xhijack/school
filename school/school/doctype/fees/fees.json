@@ -21,6 +21,8 @@
   "fees_detail",
   "section_break_vatk",
   "column_break_tdzv",
+  "party_type",
+  "party",
   "column_break_ndbc",
   "column_break_pymr",
   "total",
@@ -161,6 +163,18 @@
    "fieldtype": "Data",
    "label": "Full Name",
    "read_only": 1
+  },
+  {
+   "fieldname": "party_type",
+   "fieldtype": "Link",
+   "label": "Party Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "party",
+   "fieldtype": "Dynamic Link",
+   "label": "Party",
+   "options": "party_type"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -171,7 +185,7 @@
    "link_fieldname": "Party"
   }
  ],
- "modified": "2024-04-22 09:34:06.173101",
+ "modified": "2024-05-30 09:59:31.213901",
  "modified_by": "Administrator",
  "module": "School",
  "name": "Fees",

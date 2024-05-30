@@ -61,5 +61,8 @@ def create_fees(fees_schedule):
 				fee_detail.amount = fee_structure_detail.amount
 
 		fee.submit()
+		frappe.db.set_value('Fees', fee.name, 'party_type', 'Fees Schedule')
+		frappe.db.set_value('Fees', fee.name, 'party', fees_schedule)
+	frappe.db.commit()
 	return "success"
 		

@@ -25,7 +25,7 @@ class Fees(Document):
 			frappe.db.set_value('Fees', self.name, 'status', 'Unpaid')
 			for fee in self.fees_detail:
 				
-				self.validator.validate({'priod': self.priod, 'student': self.student, 'fee_category': fee.fees_category})
+				self.validator.validate({'priod': self.priod, 'student': self.student, 'fee_category': fee.fees_category, 'docstatus': 1})
 
 				fees_ledger = frappe.new_doc("Fees Ledger")
 				fees_ledger.student = self.student
@@ -58,8 +58,7 @@ class Validator:
 
 class PriodUniqValidator(Validator):
 	def validate(self, data):
-		print(data)
-		if frappe.db.exists('Fees Ledger', {'priod': data.get('priod'), 'student': data.get('student'), 'fee_category': data.get('fee_category') }):
+		if frappe.db.exists('Fees Ledger', {'priod': data.get('priod'), 'student': data.get('student'), 'fee_category': data.get('fee_category'), 'docstatus': 1 }):
 			frappe.throw('Priod already exists')
 		return super().validate(data)
 
@@ -77,10 +76,13 @@ def pay(payment_data):
 	frappe.db.set_value('Fees', payment_data['name'], 'status', 'Paid')
 	frappe.db.set_value('Fees', payment_data['name'], 'payment_date', payment_data['payment_date'])
 
-	files = frappe.get_all('File', filters={'file_name': payment_data['attachment']}, fields=['*'])
-	if files:
-		frappe.db.set_value('File',files[0].name,'attached_to_doctype', 'Fees')
-		frappe.db.set_value('File',files[0].name,'attached_to_name', payment_data['name'])
+
+	if payment_data.get('attachment'):
+		files = frappe.get_all('File', filters={'file_name': payment_data['attachment']}, fields=['*'])
+
+		if files:
+			frappe.db.set_value('File',files[0].name,'attached_to_doctype', 'Fees')
+			frappe.db.set_value('File',files[0].name,'attached_to_name', payment_data['name'])
 
 
 	frappe.db.set_value('Fees Ledger', {'party': payment_data['name']}, 'status', 'Paid')
