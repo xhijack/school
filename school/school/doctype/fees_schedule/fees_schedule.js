@@ -31,6 +31,8 @@ frappe.ui.form.on("Fees Schedule", {
                         args: {
                             fees_schedule: frm.doc.name
                         },
+                        freeze: true,
+                        freeze_message: 'Sedang membuat tagihan...',
                         callback: function(r) {
                             if (r.message) {
                                 frappe.msgprint('Membuat pembayaran berhasil');
