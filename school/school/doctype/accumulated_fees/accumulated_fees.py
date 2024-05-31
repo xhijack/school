@@ -1,6 +1,7 @@
 # Copyright (c) 2024, PT Sopwer Teknologi Indonesia and contributors
 # For license information, please see license.txt
 
+import json
 import frappe
 from frappe.model.document import Document
 
@@ -34,5 +35,29 @@ class AccumulatedFees(Document):
 				fee.submit()
 				frappe.db.set_value('Fees', fee.name, 'party_type', 'Accumulated Fees')
 				frappe.db.set_value('Fees', fee.name, 'party', self.name)
+			
+			frappe.db.set_value('Accumulated Fees', self.name, 'status', 'Unpaid')
 			frappe.db.commit()
 
+	def on_cancel(self):
+		if self.docstatus == 2:
+			frappe.db.set_value('Accumulated Fees', self.name, 'status', 'Cancelled')
+			fees = frappe.get_all('Fees', {'party': self.name, 'docstatus': 1})
+			for fee in fees:
+				fee = frappe.get_doc('Fees', fee.name)
+				fee.cancel()
+			frappe.db.commit()
+
+@frappe.whitelist()
+def pay(accumulated_fees, payment_data):
+	payment_data = json.loads(payment_data)
+	af = frappe.get_all('Fees', filters={'party': accumulated_fees, 'docstatus': 1})
+	for fee in af:
+		frappe.db.set_value('Fees', fee.name, 'status', 'Paid')
+		frappe.db.set_value('Fees', fee.name, 'payment_date', payment_data['payment_date'])
+
+		frappe.db.set_value('Fees Ledger', {'party': payment_data['name']}, 'status', 'Paid')
+		frappe.db.set_value('Fees Ledger', {'party': payment_data['name']}, 'payment_date',  payment_data['payment_date'])
+	frappe.db.set_value('Accumulated Fees', accumulated_fees, 'status', 'Paid')
+	frappe.db.commit()
+	return "success"

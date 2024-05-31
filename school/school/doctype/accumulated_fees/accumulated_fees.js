@@ -10,6 +10,53 @@ frappe.ui.form.on("Accumulated Fees", {
                 }
             };
         });
+
+        // Add Pay button
+        if (frm.doc.status === "Unpaid") {
+            frm.add_custom_button(__('Pay'), function() {
+                // Open dialog for payment details
+                frappe.prompt([
+
+                    {
+                        fieldname: 'transfer_date',
+                        fieldtype: 'Date',
+                        label: 'Transfer Date',
+                        default: frappe.datetime.get_today()
+                    },
+                    {
+                        fieldname: 'amount',
+                        fieldtype: 'Currency',
+                        label: 'Amount',
+                        default: frm.doc.total
+                    }
+                ], function(values) {
+                    // Send payment data to API
+                    var paymentData = {
+                        attachment: values.attachment,
+                        amount: values.amount,
+                        name: frm.doc.name,
+                        payment_date: values.transfer_date
+                    };
+
+                    frappe.call({
+                        'method': 'school.school.doctype.accumulated_fees.accumulated_fees.pay',
+                        'args': {
+                            'accumulated_fees': frm.doc.name,
+                            'payment_data': paymentData
+                        },
+                        'freeze': true,
+                        'freeze_message': 'Processing Payment...',
+                        'callback': function(r) {
+                            if (r.message == 'success') {
+                                frm.reload_doc();
+                            }
+                        }
+                    })
+                    // Call your payment API here and handle the response
+                    // ...
+                }, 'Payment Details');
+            });
+        }
 	},
 });
 

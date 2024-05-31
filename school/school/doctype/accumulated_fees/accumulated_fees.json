@@ -124,7 +124,7 @@
    "link_fieldname": "party"
   }
  ],
- "modified": "2024-05-30 10:13:19.624333",
+ "modified": "2024-05-31 09:27:55.889130",
  "modified_by": "Administrator",
  "module": "School",
  "name": "Accumulated Fees",
@@ -146,5 +146,22 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [
+  {
+   "color": "Yellow",
+   "title": "Draft"
+  },
+  {
+   "color": "Orange",
+   "title": "Unpaid"
+  },
+  {
+   "color": "Green",
+   "title": "Paid"
+  },
+  {
+   "color": "Red",
+   "title": "Cancelled"
+  }
+ ]
 }
