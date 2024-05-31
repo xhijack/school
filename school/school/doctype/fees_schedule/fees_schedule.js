@@ -24,19 +24,22 @@ frappe.ui.form.on("Fees Schedule", {
                     }
                 });
             });
-            frm.add_custom_button(__('Create Fees'), function() {
-                frappe.call({
-                    method: 'school.school.doctype.fees_schedule.fees_schedule.create_fees',
-                    args: {
-                        fees_schedule: frm.doc.name
-                    },
-                    callback: function(r) {
-                        if (r.message) {
-                            frappe.msgprint('Membuat pembayaran berhasil');
+            if (frm.doc.docstatus == 1){
+                frm.add_custom_button(__('Create Fees'), function() {
+                    frappe.call({
+                        method: 'school.school.doctype.fees_schedule.fees_schedule.create_fees',
+                        args: {
+                            fees_schedule: frm.doc.name
+                        },
+                        callback: function(r) {
+                            if (r.message) {
+                                frappe.msgprint('Membuat pembayaran berhasil');
+                            }
                         }
-                    }
+                    });
                 });
-            });
+    
+            }
         
     }
 })
